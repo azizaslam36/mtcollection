@@ -41,7 +41,7 @@ p{
     margin: 40px 0;
 }
 
-button.normal{
+.normal{
     font-size: 14px;
     font-weight: 600;
     padding: 15px 30px;
@@ -53,7 +53,7 @@ button.normal{
     outline: none;
     transition: 0.2s;
 }
-button.white{
+.white{
     font-size: 13px;
     font-weight: 600;
     padding: 11px 18px;
@@ -130,7 +130,7 @@ body {
 /* Hero */
 #hero{
     background-image: url(img/mt\ background.png);
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
@@ -153,8 +153,135 @@ body {
     font-weight: 600;
     cursor: pointer;
 }
+#hero p{
+    color: #000;
+}
 
+/* feature box */
 
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .feature-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
+    border: 1px solid #cce7de;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .feature-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+#feature .feature-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .feature-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fdddfd;
+}
+#feature .feature-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .feature-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .feature-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .feature-box:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .feature-box:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+
+/* product arrow */
+.forward-button{
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.forward-button:hover{
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #a89e9e;
+}
+
+/* Category & Product Section */
+
+.heaing2 {
+    font-size: 3rem;
+    margin: 22px 0px;
+    font-family: fangsong;
+}
+#cati-container {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.category, 
+.product-side-category {
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #a89e9e;
+    background-color: #edecec;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 300px;
+    height: 27rem;
+    border-radius: 15px;
+}
+.category, 
+.product-side-category:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.product-side-category {
+    border-radius: 21px;
+}
+
+.category h3, 
+.product-side-category h3 {
+    font-size: 1.2rem;
+}
+
+.product-heading {
+    font-size: 15px;
+    margin: 5px 0;
+    overflow: hidden;
+    height: 86px;
+}
+
+.product-price {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.product-img {
+    height: 16rem;
+    width: 14rem;
+    background-size: cover;
+    background-image: url(img/tshirt.webp);
+}
+.container-link{
+    text-decoration: none;
+}
 
 /* About Section */
 .about {
@@ -194,129 +321,162 @@ body {
     background-size: cover;
 }
 
-/* Category & Product Section */
-
-.heaing2 {
-    font-size: 3rem;
-    margin: 22px 0px;
-    font-family: fangsong;
-}
-#cati-container {
-    color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 5px;
-}
-
-.category, 
-.product-side-category {
-    color: black;
-    background: #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    margin: 1rem;
-    padding: 1rem;
-    max-width: 300px;
-    height: 27rem;
-    border-radius: 15px;
-}
-
-.product-side-category {
-    border-radius: 21px;
-}
-
-.category h3, 
-.product-side-category h3 {
-    font-size: 1.2rem;
-}
-
-.product-heading {
-    font-size: 15px;
-    margin: 5px 0;
-    overflow: hidden;
-    height: 86px;
-}
-
-.product-price {
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-
-.product-img {
-    height: 16rem;
-    width: 14rem;
-    background-size: cover;
-    background-image: url(img/tshirt.webp);
-}
-
 /* Product Page */
 #product-page {
     margin: 7rem 0;
 }
 
-.view-products {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: rgba(0, 0, 0, 0.1);
-    color: black;
-    text-decoration: none;
-    border: 1px solid;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+
+/* General Elements */
+
+
+.title-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.view-products:hover {
-    background: #218838;
+.product {
+    height: 27rem;
 }
 
+.picture {
+    height: 70%;
+    width: 100%;
+    border-top-right-radius: 21px;
+    border-top-left-radius: 21px;
+    overflow: hidden;
+}
+
+.picture img {
+    height: 100%;
+    width: 100%;
+}
 .pic {
     height: 70%;
     width: 100%;
     background-size: cover;
     border: 1px solid;
 }
-/* Product Images */
-.product-img1 { background-image: url(img/cup.jpg); }
-.product-img2 { background-image: url(img/shoe.jpg); }
-.product-img3{
-    background-image: url(img/tshirt.webp);
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #edecec;
 }
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .logo{
+    margin-bottom: 13px;
+    background-color: #333;
+}
+footer h4{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 14px;
+    padding-bottom: 0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    padding-bottom: 0 0 8px 0;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .follow i:hover,footer a:hover{
+    color: #088178;
+
+}
+
+footer .copywrite{
+    width: 100%;
+    text-align: center;
+}
+
 /* Responsive Styles */
-@media (max-width: 600px) {
-    header {
-        height: auto;
+@media (max-width: 799px) {
+    .section-p1{
+        padding: 40px 40px;
     }
-
-    #header h1 {
-        margin: 20px;
-        font-size: 3rem;
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #333;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
     }
-
-    #header p {
-        font-size: 18px;
+    #navbar.active{
+        right: 0px;
     }
-
-    nav {
-        font-size: 0.8rem;
+    #navbar li{
+        margin-bottom: 25px;
     }
-
-    nav ul li {
-        margin: 3px;
+    #mobile{
+        display: flex;
+        align-items: center;
     }
-
-    nav ul li a {
-        padding: 0.2rem 0.5rem;
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
     }
-
-    .nav-brand h1 {
-        font-size: 0.8rem;
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
     }
-
-    .nav-brand p {
-        font-size: 0.6rem;
+    #lg-bag{
+        display: none;
     }
-
+    
+    #hero{
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 20% right 30%;
+    }
+    #feature{
+        justify-content: center;
+    }
+    #feature .feature-box {
+        margin: 15px 15px;
+    }
     .contain-about h3 {
         font-size: 2rem;
         margin: 3rem 0;
@@ -325,18 +485,21 @@ body {
     .contain-about p {
         font-size: 0.9rem;
     }
+    
 
     .img-contain {
         height: 8rem;
         width: 8rem;
     }
-
-    .category,
-    .product-side-category {
+    .category, .product-side-category {
         height: 14rem;
-        max-width: 136px;
+        max-width: 177px;
         margin: 4px;
         padding: 0.5rem;
+    }
+    #cati-container {
+        justify-content: flex-start;
+        margin: 10px;
     }
 
     .category h3, 
@@ -366,48 +529,41 @@ body {
     }
 }
 
-@media (max-width: 300px) {
-    #header h1 {
-        font-size: 1rem;
+@media (max-width: 477px) {
+    .section-p1{
+        padding: 20px;
     }
-
-    nav {
-        font-size: 0.5rem;
+    #header{
+        padding: 10px 30px;
     }
-
-    .nav-brand h1 {
-        font-size: 0.5rem;
+    h1{
+        font-size: 38px;
     }
-
-    .nav-brand p {
-        font-size: 0.4rem;
+    h2{
+        font-size: 32px;
     }
+    
+    #hero{
+        padding: 0 20px;
+        background-position: 75%;
+        align-items: center;
+    }
+    #feature{
+        justify-content: space-between;
+    }
+    #feature .feature-box {
+        width: 130px;
+        margin: 0 0 15px 0;
+    }
+    footer .copyright{
+        text-align: start;
+    }
+    #cati-container {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
 }
-
-/* General Elements */
-hr {
-    color: #4A494A;
-}
-
-.title-heading {
-    background-color: #a69e9e;
-    margin: 10px;
-}
-
-.product {
-    height: 27rem;
-}
-
-.picture {
-    height: 70%;
-    width: 100%;
-    border-top-right-radius: 21px;
-    border-top-left-radius: 21px;
-    overflow: hidden;
-}
-
-.picture img {
-    height: 100%;
-    width: 100%;
 }
 
