@@ -67,8 +67,8 @@ p{
 
 
 body {
-    /* background: linear-gradient(to right, #4A494A, #706F6F); */
     width: 100%;
+    background-color: #fff;
 }
 
 /* Navigation Bar */
@@ -76,8 +76,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
-    background-color: #333;
+    padding: 2px 80px;
+    background-color: #151916;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
     z-index: 999;
     position: sticky;
@@ -129,11 +129,11 @@ body {
 
 /* Hero */
 #hero{
-    background-image: url(img/mt\ background.png);
+    background: url(img/mt\ background.png);
     height: 80vh;
     width: 100%;
     background-size: cover;
-    background-position: top 25% right 0;
+    background-position: top 10% right 0;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -238,22 +238,17 @@ body {
 .category, 
 .product-side-category {
     color: black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #a89e9e;
-    background-color: #edecec;
-    margin: 1rem;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
+    /* background-color: #edecec; */
+    margin: 2rem;
     padding: 1rem;
     max-width: 300px;
     height: 27rem;
-    border-radius: 15px;
 }
 .category, 
 .product-side-category:hover{
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-}
-
-.product-side-category {
-    border-radius: 21px;
 }
 
 .category h3, 
