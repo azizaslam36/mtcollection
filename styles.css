@@ -579,8 +579,9 @@ footer .copywrite{
 }
 }
 
-@media (min-width: 320px) {
-    .category, .product-side-category {
+@media (min-width: 320px) and (max-width: 476px) {
+    .category,
+    .product-side-category {
         max-width: 160px;
     }
 }
