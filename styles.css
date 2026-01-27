@@ -210,9 +210,11 @@ body {
 .forward-button{
     padding: 10px;
     background-color: transparent;
-    border: 1px solid;
-    border-radius: 8px;
+    /* align-self: flex-end; */
+    border: none;
     cursor: pointer;
+    color: blue;
+    align-items: last baseline;
 }
 .forward-button:hover{
     border: 1px solid black;
@@ -240,7 +242,7 @@ body {
     color: black;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
-    /* background-color: #edecec; */
+    background-color: #edecec;
     margin: 2rem;
     padding: 1rem;
     max-width: 300px;
@@ -338,9 +340,16 @@ body {
 .picture {
     height: 70%;
     width: 100%;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    overflow: hidden;
+    transition: ease;
+}
+.picture:hover {
+    height: 70%;
+    width: 100%;
     border-top-right-radius: 21px;
     border-top-left-radius: 21px;
-    overflow: hidden;
 }
 
 .picture img {
@@ -358,7 +367,8 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #edecec;
+    /* background-color: #edecec; */
+    background-color: #656161;
 }
 
 footer .col{
@@ -369,20 +379,23 @@ footer .col{
 }
 footer .logo{
     margin-bottom: 13px;
-    background-color: #333;
+    background-color: #656161;
 }
 footer h4{
     font-size: 25px;
     padding-bottom: 20px;
+    color: whitesmoke;
 }
 footer p{
     font-size: 14px;
     padding-bottom: 0 0 8px 0;
+    color: whitesmoke;
 }
 footer a{
     font-size: 13px;
     text-decoration: none;
-    color: #222;
+    /* color: #222; */
+    color: whitesmoke;
     padding-bottom: 0 0 8px 0;
     margin-bottom: 10px;
 }
@@ -538,10 +551,14 @@ footer .copywrite{
         font-size: 32px;
     }
     
-    #hero{
-        padding: 0 20px;
-        background-position: 75%;
-        align-items: center;
+    #hero {
+        JUSTIFY-CONTENT: flex-start;
+        padding: 36px 147px 0px 16px;
+        background-position: 55%;
+        align-items :flex-start;
+    }
+    #hero h1 {
+        font-size: 28px;
     }
     #feature{
         justify-content: space-between;
@@ -562,3 +579,8 @@ footer .copywrite{
 }
 }
 
+@media (min-width: 320px) {
+    .category, .product-side-category {
+        max-width: 160px;
+    }
+}
