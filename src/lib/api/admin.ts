@@ -31,7 +31,7 @@ export interface AdminProductQuery {
   sort?: string;
 }
 
-function buildQuery(params: object){
+function buildQuery(params: object) {
   const search = new URLSearchParams();
   for (const [key, value] of Object.entries(params)) {
     if (value !== undefined) search.set(key, String(value));
