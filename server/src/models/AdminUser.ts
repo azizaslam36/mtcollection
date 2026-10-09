@@ -36,9 +36,10 @@ adminUserSchema.methods.comparePassword = function (
 
 // Never serialize the hash if a document is accidentally sent as JSON.
 adminUserSchema.set("toJSON", {
-  transform: (_doc: AdminUserDocument, ret: Record<string, unknown>) => {
-    delete ret.passwordHash;
-    return ret;
+  transform: (_doc, ret) => {
+    const out = ret as unknown as Record<string, unknown>;
+    delete out.passwordHash;
+    return out;
   },
 });
 

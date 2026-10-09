@@ -1,5 +1,5 @@
 import type { Response } from "express";
-import jwt from "jsonwebtoken";
+import jwt, { type SignOptions } from "jsonwebtoken";
 import { env } from "../config/env";
 import { ApiError } from "../utils/ApiError";
 import { asyncHandler } from "../utils/asyncHandler";
@@ -39,7 +39,7 @@ export const login = asyncHandler(async (req, res) => {
   const token = jwt.sign(
     { sub: admin.id, email: admin.email },
     env.jwtSecret,
-    { expiresIn: env.jwtExpiresIn }
+    { expiresIn: env.jwtExpiresIn as SignOptions["expiresIn"] }
   );
 
   setAuthCookie(res, token);
