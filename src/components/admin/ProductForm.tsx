@@ -75,7 +75,7 @@ export function ProductForm({ initialProduct }: ProductFormProps) {
       // Always fill in the platform + URL, even when automated
       // fetching wasn't possible — that's still useful groundwork for
       // manual entry (see server/src/services/affiliate).
-      update("platform", result.platform === "Other" ? form.platform : result.platform);
+      update("platform", result.platform === "Other" ? form.platform : (result.platform as (typeof form)["platform"]));
       update("affiliateUrl", importUrl.trim());
       if (result.metadata) {
         if (result.metadata.title) update("title", result.metadata.title);
@@ -250,7 +250,7 @@ export function ProductForm({ initialProduct }: ProductFormProps) {
         <Field label="Season">
           <select
             value={form.season}
-            onChange={(e) => update("season", e.target.value)}
+            onChange={(e) => update("season", e.target.value as (typeof form)["season"])}
             className="w-full rounded-tag border border-mist px-3 py-2 text-sm"
           >
             {SEASONS.map((s) => (
@@ -267,7 +267,7 @@ export function ProductForm({ initialProduct }: ProductFormProps) {
           <select
             required
             value={form.platform}
-            onChange={(e) => update("platform", e.target.value)}
+            onChange={(e) => update("platform", e.target.value as (typeof form)["platform"])}
             className="w-full rounded-tag border border-mist px-3 py-2 text-sm"
           >
             {PLATFORMS.map((p) => (
